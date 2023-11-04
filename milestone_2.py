@@ -18,9 +18,9 @@ while True:
   guess = input("Enter one letter: ")
 
   #make sure guess is just one letter
-  if len(guess) == 1 and guess in ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"):
+  if len(guess) == 1 and guess.isalpha():
     print("valid input")
     break # exit loop
   else: 
-    # guess does not have a valid input, ask user to try again
-    print("Not valid input, try again")
+    # guess is not one letter, ask user to try again
+    print("Invalid letter. Please, enter a single alphabetical character")

@@ -24,3 +24,8 @@ while True:
   else: 
     # guess is not one letter, ask user to try again
     print("Invalid letter. Please, enter a single alphabetical character")
+
+if guess in word:
+  print(f'Good guess! {guess} is in word.')
+else:
+  print(f'Sorry, {guess} is ont in the word. Try again')

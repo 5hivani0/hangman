@@ -12,3 +12,15 @@ word = random.choice(word_list)
 
 #print the randomly selected fruit
 print(word)
+
+while True:
+  # Ask user to enter on letter and assign input to the variable guess
+  guess = input("Enter one letter: ")
+
+  #make sure guess is just one letter
+  if len(guess) == 1 and guess in ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"):
+    print("valid input")
+    break # exit loop
+  else: 
+    # guess does not have a valid input, ask user to try again
+    print("Not valid input, try again")

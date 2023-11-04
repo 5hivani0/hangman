@@ -13,19 +13,22 @@ word = random.choice(word_list)
 #print the randomly selected fruit
 print(word)
 
-while True:
-  # Ask user to enter on letter and assign input to the variable guess
-  guess = input("Enter one letter: ")
+#function that takes the guessed letter as an argument and check if the letter is in the word
+def check_guess(guess):
+  guess = guess.lower()
+  if guess in word:
+    print(f'Good guess! {guess} is in word.')
+  else:
+    print(f'Sorry, {guess} is not in the word. Try again')
+#function that iteratively checks to make sur input is valid before calling check_guess function  
+def ask_for_input():
+  while True:
+    guess = input("Enter one letter: ")
+    #check if guess is not one letter
+    if len(guess) != 1 or not guess.isalpha():
+      print("Invalid letter. Please, enter a single alphabetical character")
+    else: 
+     break
+  check_guess(guess)
 
-  #make sure guess is just one letter
-  if len(guess) == 1 and guess.isalpha():
-    print("valid input")
-    break # exit loop
-  else: 
-    # guess is not one letter, ask user to try again
-    print("Invalid letter. Please, enter a single alphabetical character")
-
-if guess in word:
-  print(f'Good guess! {guess} is in word.')
-else:
-  print(f'Sorry, {guess} is ont in the word. Try again')
+ask_for_input()

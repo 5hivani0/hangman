@@ -12,7 +12,7 @@ class Hangman():
 
   #function that takes the guessed letter as an argument and check if the letter is in the word
   def check_guess(self, guess):
-    #make guess lowercase
+  #make guess lowercase
     guess = guess.lower()
     if guess in self.word:
       print(f'Good guess! {guess} is in word.')
@@ -20,7 +20,7 @@ class Hangman():
       for letter in range(len(self.word)):
         if self.word[letter] == guess:
           self.word_guessed[letter] = guess
-          self.num_letters -= self.word.count(guess)
+      self.num_letters -= 1
     else:
       #if letter not in word, you lose one life
       self.num_lives -= 1
@@ -50,20 +50,22 @@ class Hangman():
 
 def play_game(word_list):
   num_lives = 5
-  game = Hangman(word_list, num_lives)
+  #call hangman class
+  game = Hangman(word_list, num_lives=5)
   while True:
+    #lose when you lose all your lives
     if game.num_lives == 0:
       print("You lost!")
       break
+    #if you still have letters left that you haven't guessed yet
     elif game.num_letters > 0:
       game.ask_for_input()
     else:
-      print("You won the game!")
+      #if you still have lives and have guessed all letters, you win
+      print("Congratualations, you won the game!")
       break
 
-#list of 5 favourite fruits
-favourite_fruits = ["lemon", "grapes", "orange", "peach", "apricot"]
-#assigned favourite fruits to variable called word_list
-word_list = favourite_fruits
-
-play_game(word_list)
+if __name__ == '__main__':
+  word_list = ['apple', 'banana', 'orange', 'pear', 'strawberry', 'watermelon']
+  #call game
+  play_game(word_list)

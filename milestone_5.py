@@ -55,14 +55,14 @@ def play_game(word_list):
     if game.num_lives == 0:
       print("You lost!")
       break
-    elif game.num_letters <= 0:
-      print("Congratulations, you have won the game!")
-      break
-    else:
+    elif game.num_letters > 0:
       game.ask_for_input()
+    else:
+      print("You won the game!")
+      break
 
 #list of 5 favourite fruits
-favourite_fruits = ["apple", "grapes", "orange", "strawberry", "pineapple"]
+favourite_fruits = ["lemon", "grapes", "orange", "peach", "apricot"]
 #assigned favourite fruits to variable called word_list
 word_list = favourite_fruits
 

@@ -1,8 +1,14 @@
 import random
 
+
 class Hangman():
   def __init__(self, word_list, num_lives=5):
+    """
+    Initialize a Hangman game
 
+      - word_list (list): List of words to choose from for the game.
+      - num_lives (int): Number of lives the player starts with (default is 5).
+    """
     self.word = random.choice(word_list).lower()
     self.word_guessed = ['_' for _ in self.word]
     self.num_letters = len(set(self.word))
@@ -10,9 +16,14 @@ class Hangman():
     self.word_list = word_list
     self.list_of_guesses = []
 
-  #function that takes the guessed letter as an argument and check if the letter is in the word
   def check_guess(self, guess):
-  #make guess lowercase
+    """
+    Check if the guessed letter is in the word.
+      - guess (str): The guessed letter.
+
+    Output:
+      Prints messages indicating whether the guess is correct and updates the game state.
+    """
     guess = guess.lower()
     if guess in self.word:
       print(f'Good guess! {guess} is in word.')
@@ -27,10 +38,13 @@ class Hangman():
       print(f'Sorry, {guess} is not in the word.')
       print(f'You have {self.num_lives} lives left')
 
-
-
-  #function that iteratively checks to make sur input is valid before calling check_guess function  
   def ask_for_input(self):
+    """
+    Prompt the user to enter a single letter, validate the input, and call check_guess.
+
+    Output:
+      Continues prompting until a valid guess is provided.
+    """
     while True:
       print(self.word_guessed)
       #ask user to guess a letter
@@ -49,7 +63,11 @@ class Hangman():
         break
 
 def play_game(word_list):
-  num_lives = 5
+  """
+  Play the Hangman game.
+
+    - word_list (list): List of words to choose from for the game.
+  """
   #call hangman class
   game = Hangman(word_list, num_lives=5)
   while True:
@@ -64,6 +82,7 @@ def play_game(word_list):
       #if you still have lives and have guessed all letters, you win
       print("Congratualations, you won the game!")
       break
+
 
 if __name__ == '__main__':
   word_list = ['apple', 'banana', 'orange', 'pear', 'strawberry', 'watermelon']

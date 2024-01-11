@@ -4,6 +4,7 @@
 * Description
 * What I Gained
 * Installation
+* Tools used
 * Usage
 * File structure of the project
 * License
@@ -29,6 +30,11 @@ cd hangman
 
 python milestone_5.py
 
+## Tools Used ##
+* **Programming Language:** Python
+* **Libraries:** None (pure Python implementation)
+* **Version Control:** Git
+
 ## Usage ##
 1. User is given 5 lives, and will attempt to guess the word, one letter at a time
 
@@ -44,11 +50,11 @@ python milestone_5.py
 ## File Structure ##
 * README.md : This documentation file
 * milestone_5.py : The main Python script containing the Hangman game.
-
-Other early python script used to edit and build the structure of the python game.
-* milestone_2.py
-* milestone_3.py
-* milestone_4.py
+* .gitignore : files or directories that should be ignored by Git. Includes files of early python scripts used to test, edit and build the structure of the python hangman game, as well as a hangman game template.
+    * milestone_2.py: Test if letter the user inputted is valid.
+    * milestone_3.py: Test if guessed letter is in the word.
+    * milestone_4.py: Test for keeping track of guesses and adding lives.
+    * hangman_Template.py: A template with the basic structure of a class already designed, with instructions on how you can create your own hangman game.
 
 ## License ##
 MIT

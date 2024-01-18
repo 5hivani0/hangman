@@ -20,15 +20,15 @@ During the development of this Hangman Game project, I gained valuable insights 
 ## Installation ##
 1. Clone this repository to your computer:
 
-git clone https://github.com/5hivani0/hangman.git
+``` git clone https://github.com/5hivani0/hangman.git ```
 
 2. Navigate to the project directory:
 
-cd hangman
+``` cd hangman ```
 
 3. Run game:
 
-python milestone_5.py
+``` python milestone_5.py ```
 
 ## Tools Used ##
 * **Programming Language:** Python

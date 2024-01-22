@@ -44,52 +44,25 @@ During the development of this Hangman Game project, I gained valuable insights 
 Enter one letter:
 ```
 * If the guess is not a single letter, the user will be asked to input a guess again.
-```
-Enter one letter: 9
-Invalid letter. Please, enter a single alphabetical character
-['_', '_', '_', '_']
-Enter one letter:
-```
+![Not a letter](https://github.com/5hivani0/hangman/assets/149093767/54f2f113-5256-41bb-aff2-43c12d4629da)
+
 * A letter that is guessed correctly will be shown.
-```
-Enter one letter: e
-Good guess! e is in word.
-['_', 'e', '_', '_']
-Enter one letter:
-```
+![correct guess](https://github.com/5hivani0/hangman/assets/149093767/1177f263-5b56-40e2-80ed-9fa3e1c38b0c)
+
 * If the letter has been previously guessed before, the user will be asked to input a guess again.
-```
-['_', 'e', '_', '_']
-Enter one letter: e
-You already tried that letter!
-['_', 'e', '_', '_']
-Enter one letter:
-```
+![already guessed](https://github.com/5hivani0/hangman/assets/149093767/50fc9b00-0f0d-4ad8-8691-f2f306019827)
+
 * A letter guessed that is not correct will result in one life lost.
-```
-Enter one letter: i
-Sorry, i is not in the word.
-You have 4 lives left
-['_', 'e', '_', '_']
-Enter one letter:
-```  
+![wrong letter guessed](https://github.com/5hivani0/hangman/assets/149093767/e23f6605-b4bb-49c5-bb7b-577b51f620f2)
+
 
 3. Game ends when:
 * User has lost by losing all their lives.
-```
-['p', 'e', 'a', '_']
-Enter one letter: z
-Sorry, z is not in the word.
-You have 0 lives left
-You lost!
-```
+![lose](https://github.com/5hivani0/hangman/assets/149093767/e7c0bca7-91be-4ef4-a1b6-dd5ae1544c54)
+
 * User has won by successfully guessing all the letters in the word without losing all their lives.
-```
-['p', 'e', 'a', '_']
-Enter one letter: r
-Good guess! r is in word.
-Congratualations, you won the game!
-```
+![correct guess](https://github.com/5hivani0/hangman/assets/149093767/8d97320c-a6bf-42d5-999c-74d0945d3d7b)
+
 
 ## File Structure ##
 * ``` README.md ``` : This documentation file
